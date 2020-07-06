@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Map</title>
+        <meta name="viewport" content="initial-scale=1.0">
+        <style>
+            html, body{height:100%; margin:0;padding:0;}
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to Cleveland State University</h1>
+        <div id="map"></div>
+        <script>
+            var map;
+            function initMap(){
+                map=new google.maps.Map(document.getElementById('map'), {
+                    center:{lat:41.502610, lng:-81.675464},
+                    zoom: 15
+                });
+            }
+        </script>
+        <script
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=YOUR-API-KEY" 
+        async defer>        </script>
+    </body>
+</html>
